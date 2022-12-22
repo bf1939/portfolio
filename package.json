@@ -1,0 +1,35 @@
+{
+  "name": "portfolio",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint src/**/*.{vue,js}",
+    "format": "eslint --fix src/**/*.{vue,js} && prettier -w src/**/*.{vue,js}",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "the-new-css-reset": "^1.7.3",
+    "vue": "^3.2.45",
+    "vue-router": "^4.1.6"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.0.0",
+    "autoprefixer": "^10.4.13",
+    "eslint": "^8.30.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-sort-imports-es6-autofix": "^0.6.0",
+    "eslint-plugin-vue": "^9.8.0",
+    "husky": "^8.0.2",
+    "lint-staged": "^13.1.0",
+    "postcss-nested": "^6.0.0",
+    "prettier": "^2.8.1",
+    "vite": "^4.0.0"
+  },
+  "lint-staged": {
+    "src/**/*.{vue,js}": "npm run format"
+  }
+}
