@@ -12,7 +12,6 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "normalize.css": "^8.0.1",
     "the-new-css-reset": "^1.7.3",
     "vue": "^3.2.45",
     "vue-router": "^4.1.6"

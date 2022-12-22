@@ -1,4 +1,3 @@
-// import "normalize.css";
 import "the-new-css-reset/css/reset.css";
 import App from "@/App.vue";
 import Home from "@/components/pages/Home.vue";
