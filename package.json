@@ -12,11 +12,12 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "the-new-css-reset": "^1.7.3",
     "vue": "^3.2.45",
-    "vue-router": "^4.1.6"
+    "vue-router": "^4.1.6",
+    "vuetify": "^3.0.6"
   },
   "devDependencies": {
+    "@mdi/font": "^7.1.96",
     "@vitejs/plugin-vue": "^4.0.0",
     "autoprefixer": "^10.4.13",
     "eslint": "^8.30.0",
@@ -27,7 +28,8 @@
     "lint-staged": "^13.1.0",
     "postcss-nested": "^6.0.0",
     "prettier": "^2.8.1",
-    "vite": "^4.0.0"
+    "vite": "^4.0.0",
+    "vite-plugin-vuetify": "^1.0.1"
   },
   "lint-staged": {
     "src/**/*.{vue,js}": "npm run format"
