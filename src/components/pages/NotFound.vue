@@ -1,16 +1,13 @@
 <script setup></script>
 
 <template>
-  <div :class="$style.wrapper">This page could not be found.</div>
+  <v-row class="fill-height" align="center" justify="center">
+    <div :class="$style.text">This page could not be found.</div>
+  </v-row>
 </template>
 
 <style module lang="postcss">
-.wrapper {
-  font-family: "Alfa Slab One", cursive;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+.text {
   font-size: 22px;
 }
 </style>

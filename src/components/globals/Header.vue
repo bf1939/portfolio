@@ -1,60 +1,56 @@
 <script setup>
-const navList = [
-  { value: "profile", to: "/profile" },
-  { value: "GitHub", to: "/github", isBlank: true },
-];
+import { useRouter } from "vue-router";
+
+const router = useRouter();
+
+const goTo = (path) => router.push(path);
+
+const navList = [{ value: "about", to: "/about" }];
 </script>
 
 <template>
-  <div :class="$style.wrapper">
-    <h1>
-      <router-link to="/">iku ohira</router-link>
-    </h1>
-    <nav>
-      <ul>
-        <li v-for="item in navList" :key="item.value">
-          <a v-if="item.isBlank" href="" target="_blank">{{ item.value }}</a>
-          <router-link v-else :to="item.to">{{ item.value }}</router-link>
-        </li>
-      </ul>
-    </nav>
-  </div>
+  <v-app-bar
+    :class="$style.appBar"
+    app
+    :absolute="false"
+    density="compact"
+    elevation="0"
+  >
+    <v-container fluid>
+      <v-row align="center">
+        <v-col cols="auto">
+          <v-app-bar-title :class="$style.title" @click="goTo('/')">
+            IKU OHIRA
+          </v-app-bar-title>
+        </v-col>
+        <v-spacer class="d-none d-sm-block" />
+        <v-col cols="auto">
+          <v-btn
+            v-for="item in navList"
+            :key="item.value"
+            :class="$style.navButton"
+            @click="goTo(item.to)"
+          >
+            {{ item.value }}
+          </v-btn>
+        </v-col>
+      </v-row>
+    </v-container>
+  </v-app-bar>
 </template>
 
 <style module lang="postcss">
-.wrapper {
-  height: 50px;
-  background-color: #0a0c11;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 70px;
-  font-family: "Alfa Slab One", cursive;
-
-  h1 {
-    margin: 0;
+.appBar {
+  .title {
     font-size: 29px;
-
-    &:hover {
-      text-shadow: -2px -2px 10px #54e58c;
-    }
+    cursor: pointer;
   }
 
-  nav {
-    ul {
-      padding-left: 0;
-      display: flex;
-      gap: 15px;
+  .navButton {
+    padding: 0;
 
-      li {
-        font-size: 14px;
-        list-style: none;
-
-        &:hover {
-          text-shadow: -2px -2px 10px #54e58c;
-          transform: translateY(-2px);
-        }
-      }
+    &:hover {
+      transform: translateY(-2px);
     }
   }
 }
