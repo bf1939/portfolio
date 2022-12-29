@@ -17,7 +17,7 @@ const navList = [{ value: "about", to: "/about" }];
     elevation="0"
   >
     <v-container fluid>
-      <v-row align="center">
+      <v-row align="center" no-gutters>
         <v-col cols="auto">
           <v-app-bar-title :class="$style.title" @click="goTo('/')">
             IKU OHIRA
