@@ -1,22 +1,17 @@
 <script setup></script>
 
 <template>
-  <div :class="$style.fadeUp">こんにちは！</div>
+  <v-row class="fill-height" justify="center" align="center" no-gutters>
+    <img :class="$style.me" src="/me.png" alt="me" />
+  </v-row>
 </template>
 
 <style module lang="postcss">
-.fadeUp {
-  animation: fadeUp 2s;
-}
-
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(100px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.me {
+  height: auto;
+  max-width: calc(
+    (100vh - var(--v-layout-top) - var(--v-layout-bottom) - 32px) / 23 * 21
+  );
+  aspect-ratio: 21 / 23;
 }
 </style>
