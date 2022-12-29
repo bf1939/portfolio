@@ -6,7 +6,7 @@
       <v-btn
         variant="plain"
         icon="mdi-github"
-        href="https://github.com/bf1939/portfolio"
+        href="https://github.com/bf910/portfolio"
         target="_blank"
       />
     </v-row>
