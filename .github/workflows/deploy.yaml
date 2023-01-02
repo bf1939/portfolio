@@ -5,6 +5,11 @@ on:
     branches: ["feature/github-actions"]
   workflow_dispatch:
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 concurrency:
   group: "pages"
   cancel-in-progress: true
@@ -20,12 +25,12 @@ jobs:
         with:
           node-version: 18
           cache: npm
-      - name: npm install
+      - name: Package install
         run: npm install
-      - name: npm run build
+      - name: Build
         run: npm run build
         env:
-          BASE_URL: "/portfolio"
+          BASE_URL: /portfolio
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
@@ -33,9 +38,6 @@ jobs:
 
   deploy:
     needs: build
-    permissions:
-      pages: write
-      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
