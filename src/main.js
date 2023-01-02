@@ -1,4 +1,3 @@
-// import "the-new-css-reset/css/reset.css";
 import About from "@/components/pages/About.vue";
 import App from "@/App.vue";
 import Home from "@/components/pages/Home.vue";
@@ -14,7 +13,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes,
 });
 
