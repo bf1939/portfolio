@@ -30,7 +30,7 @@ jobs:
       - name: npm run build
         run: npm run build
         env:
-          GITHUB_PAGES: true
+          BASE_URL: "/portfolio"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
