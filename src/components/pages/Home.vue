@@ -8,10 +8,9 @@
 
 <style module lang="postcss">
 .me {
-  height: auto;
+  width: 100%;
   max-width: calc(
     (100vh - var(--v-layout-top) - var(--v-layout-bottom) - 32px) / 23 * 21
   );
-  aspect-ratio: 21 / 23;
 }
 </style>
