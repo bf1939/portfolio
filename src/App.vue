@@ -24,6 +24,5 @@ import Header from "@/components/globals/Header.vue";
 :root {
   font-family: reitam, "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
     "Hiragino Sans", Meiryo, sans-serif;
-  font-size: 14px;
 }
 </style>
