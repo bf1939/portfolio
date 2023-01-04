@@ -51,8 +51,10 @@ const navList = [{ value: "about", to: "/about" }];
   .navButton {
     padding: 0;
 
-    &:hover {
-      transform: translateY(-2px);
+    @media (hover: hover) {
+      &:hover {
+        transform: translateY(-2px);
+      }
     }
   }
 }
