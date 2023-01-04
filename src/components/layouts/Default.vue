@@ -27,6 +27,7 @@ const props = defineProps({
 
 <style module lang="postcss">
 .title {
+  font-family: reitam;
   font-size: 90px;
 
   @media screen and (max-width: 600px) {

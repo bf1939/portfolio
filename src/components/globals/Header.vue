@@ -41,6 +41,8 @@ const navList = [{ value: "about", to: "/about" }];
 
 <style module lang="postcss">
 .appBar {
+  font-family: reitam;
+
   .title {
     font-size: 29px;
     cursor: pointer;
