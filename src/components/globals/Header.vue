@@ -50,6 +50,7 @@ const navList = [{ value: "about", to: "/about" }];
 
   .navButton {
     padding: 0;
+    line-height: 2;
 
     @media (hover: hover) {
       &:hover {
