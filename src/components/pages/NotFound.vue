@@ -10,5 +10,9 @@
 .text {
   font-family: reitam;
   font-size: 22px;
+
+  @media screen and (max-width: 400px) {
+    font-size: 15px;
+  }
 }
 </style>
