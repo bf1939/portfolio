@@ -1,8 +1,43 @@
-<script setup></script>
+<script setup>
+const rotate = (e, key) => {
+  // 同時にclickを発生させない
+  if (e.type === "touchstart") e.preventDefault();
+
+  if (rotate[key]) {
+    switch (rotate[key].playState) {
+      case "running":
+        rotate[key].pause();
+        break;
+      case "paused":
+        rotate[key].play();
+        break;
+    }
+  } else {
+    rotate[key] = e.target.animate(
+      [{ transform: "rotate(0)" }, { transform: "rotate(360deg)" }],
+      {
+        duration: 5000,
+        iterations: Infinity,
+      }
+    );
+  }
+};
+</script>
 
 <template>
-  <v-row class="fill-height" justify="center" align="center" no-gutters>
-    <img :class="$style.me" src="/me.png" alt="me" />
+  <v-row
+    class="fill-height overflow-hidden"
+    justify="center"
+    align="center"
+    no-gutters
+  >
+    <img
+      :class="$style.me"
+      src="/me.png"
+      alt="me"
+      @click="rotate($event, 'me')"
+      @touchstart="rotate($event, 'me')"
+    />
   </v-row>
 </template>
 
