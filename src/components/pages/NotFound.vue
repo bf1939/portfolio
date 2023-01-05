@@ -8,6 +8,7 @@
 
 <style module lang="postcss">
 .text {
+  font-family: reitam;
   font-size: 22px;
 }
 </style>
