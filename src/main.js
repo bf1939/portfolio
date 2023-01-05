@@ -9,7 +9,8 @@ import { createRouter, createWebHistory } from "vue-router";
 const routes = [
   { path: "/", component: Home },
   { path: "/about", component: About },
-  { path: "/:catchAll(.*)", component: NotFound },
+  { path: "/:pathMatch(.*)*", redirect: "/404" },
+  { path: "/404", component: NotFound },
 ];
 
 const router = createRouter({
