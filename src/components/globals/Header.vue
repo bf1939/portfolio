@@ -23,7 +23,7 @@ const navList = [{ value: "about", to: "/about" }];
             IKU OHIRA
           </v-app-bar-title>
         </v-col>
-        <v-spacer class="d-none d-sm-block" />
+        <v-spacer />
         <v-col cols="auto">
           <v-btn
             v-for="item in navList"
