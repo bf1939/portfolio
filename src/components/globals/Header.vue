@@ -41,6 +41,8 @@ const navList = [{ value: "about", to: "/about" }];
 
 <style module lang="postcss">
 .appBar {
+  font-family: reitam;
+
   .title {
     font-size: 29px;
     cursor: pointer;
@@ -48,9 +50,12 @@ const navList = [{ value: "about", to: "/about" }];
 
   .navButton {
     padding: 0;
+    line-height: 2;
 
-    &:hover {
-      transform: translateY(-2px);
+    @media (hover: hover) {
+      &:hover {
+        transform: translateY(-2px);
+      }
     }
   }
 }

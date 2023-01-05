@@ -7,7 +7,7 @@ const props = defineProps({
 <template>
   <v-row class="fill-height">
     <v-spacer class="d-none d-md-block" />
-    <v-col cols="9">
+    <v-col class="v-col-none v-col-md-7">
       <v-row>
         <v-col>
           <h2 :class="$style.title">
@@ -27,6 +27,7 @@ const props = defineProps({
 
 <style module lang="postcss">
 .title {
+  font-family: reitam;
   font-size: 90px;
 
   @media screen and (max-width: 600px) {
