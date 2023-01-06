@@ -1,6 +1,12 @@
 <script setup>
 import Footer from "@/components/globals/Footer.vue";
 import Header from "@/components/globals/Header.vue";
+import { useRouter } from "vue-router";
+
+if (location.hash) {
+  const router = useRouter();
+  router.push(location.hash.slice("1"));
+}
 </script>
 
 <template>
