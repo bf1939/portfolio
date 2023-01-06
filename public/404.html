@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="jp">
+  <head>
+    <script>
+      const { hostname, origin, pathname } = location;
+      const isDev = hostname === "localhost";
+
+      const paths = pathname.split("/");
+      if (pathname.indexOf(".") > 0) {
+        paths.splice(isDev ? 1 : 2);
+        paths.push("#", "404");
+      } else {
+        // github pagesで存在するパスを直打ちまたはリロード
+        paths.splice(2, 0, "#");
+      }
+
+      const redirectUrl = `${origin}${paths.join("/")}`;
+      location.replace(redirectUrl);
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="noindex" />
+    <link rel="icon" type="image/png" href="/me.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iku ohira</title>
+  </head>
+  <body>
+  </body>
+</html>
