@@ -10,6 +10,9 @@ const { BASE_URL } = process.env;
 export default defineConfig({
   base: BASE_URL || "/",
   plugins: [vue(), vuetify({ autoImport: true }), pluginRewriteAll()],
+  server: {
+    host: true,
+  },
   resolve: {
     alias: {
       "@": path.join(__dirname, "src"),
