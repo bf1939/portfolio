@@ -5,7 +5,7 @@ import { useRouter } from "vue-router";
 
 if (location.hash) {
   const router = useRouter();
-  router.push(location.hash.slice("1"));
+  router.push(location.hash.slice(1));
 }
 </script>
 
