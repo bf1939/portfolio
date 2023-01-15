@@ -1,62 +1,43 @@
-<script setup>
-import { useRouter } from "vue-router";
-
-const router = useRouter();
-
-const goTo = (path) => router.push(path);
-
-const navList = [{ value: "about", to: "/about" }];
-</script>
+<script setup></script>
 
 <template>
   <v-app-bar
-    :class="$style.appBar"
+    :class="$style.wrapper"
     app
-    :absolute="false"
+    absolute
     density="compact"
     elevation="0"
   >
     <v-container fluid>
-      <v-row align="center" no-gutters>
+      <v-row align="center" justify="center" no-gutters>
         <v-col cols="auto">
-          <v-app-bar-title :class="$style.title" @click="goTo('/')">
-            IKU OHIRA
+          <v-app-bar-title :class="$style.title">
+            IKU OHIRA'S PORTFOLIO
           </v-app-bar-title>
         </v-col>
-        <v-spacer />
-        <v-col cols="auto">
-          <v-btn
-            v-for="item in navList"
-            :key="item.value"
-            :class="$style.navButton"
-            @click="goTo(item.to)"
-          >
-            {{ item.value }}
-          </v-btn>
-        </v-col>
+        <v-btn
+          :class="$style.github"
+          variant="plain"
+          icon="mdi-github"
+          href="https://github.com/bf910/portfolio"
+          target="_blank"
+        />
       </v-row>
     </v-container>
   </v-app-bar>
 </template>
 
 <style module lang="postcss">
-.appBar {
-  font-family: reitam;
+.wrapper {
+  position: relative;
 
   .title {
-    font-size: 29px;
-    cursor: pointer;
+    font-family: reitam;
   }
 
-  .navButton {
-    padding: 0;
-    line-height: 2;
-
-    @media (hover: hover) {
-      &:hover {
-        transform: translateY(-2px);
-      }
-    }
+  .github {
+    position: absolute;
+    right: 10px;
   }
 }
 </style>
