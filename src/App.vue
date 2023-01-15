@@ -1,5 +1,4 @@
 <script setup>
-import Footer from "@/components/globals/Footer.vue";
 import Header from "@/components/globals/Header.vue";
 import { useRouter } from "vue-router";
 
@@ -17,7 +16,6 @@ if (location.hash) {
         <router-view />
       </v-container>
     </v-main>
-    <Footer />
   </v-app>
 </template>
 
