@@ -5,8 +5,8 @@ import { createVuetify } from "vuetify";
 const myTheme = {
   dark: false,
   colors: {
-    background: "#ECECE7",
-    surface: "#795548",
+    background: "#ffffff",
+    surface: "#14243e",
   },
 };
 
