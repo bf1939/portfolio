@@ -22,10 +22,11 @@ if (location.hash) {
 <style module lang="postcss">
 @font-face {
   font-family: "reitam";
-  src: url("@/assets/font/Reitam Regular.otf") format("opentype");
+  src: url("@/assets/fonts/Reitam Regular.otf") format("opentype");
 }
 
 :root {
+  min-width: 340px;
   font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
     "Hiragino Sans", Meiryo, sans-serif;
 }
