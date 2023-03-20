@@ -19,7 +19,7 @@ if (location.hash) {
   </v-app>
 </template>
 
-<style module lang="postcss">
+<style module>
 @font-face {
   font-family: "reitam";
   src: url("@/assets/fonts/Reitam Regular.otf") format("opentype");

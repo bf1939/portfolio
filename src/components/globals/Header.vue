@@ -27,7 +27,7 @@
   </v-app-bar>
 </template>
 
-<style module lang="postcss">
+<style module>
 .wrapper {
   position: relative;
 

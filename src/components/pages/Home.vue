@@ -58,7 +58,7 @@
   </v-row>
 </template>
 
-<style module lang="postcss">
+<style module>
 .profile {
   .me {
     width: 100%;

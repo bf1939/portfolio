@@ -6,7 +6,7 @@
   </v-row>
 </template>
 
-<style module lang="postcss">
+<style module>
 .text {
   font-family: reitam;
   font-size: 22px;
