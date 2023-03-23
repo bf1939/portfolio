@@ -19,64 +19,99 @@
           主にKoaでバックエンドを担当していたが、最近ではNuxt.jsでフロントエンドの開発・修正も行っている。
         </p>
       </section>
+      <section :class="$style.section">
+        <h2>スキル</h2>
+        <div :class="$style.skill">
+          <v-chip>JavaScript 5年</v-chip>
+          <v-chip>TypeScript 3年</v-chip>
+          <v-chip>PHP 1年</v-chip>
+          <v-chip>Koa.js 5年</v-chip>
+          <v-chip>Nuxt.js 3年</v-chip>
+          <v-chip>Docker 5年</v-chip>
+          <v-chip>PostgreSQL 5年</v-chip>
+        </div>
+      </section>
     </v-col>
     <v-spacer class="v-col-2 d-none d-md-block" />
   </v-row>
   <v-row
     :class="$style.elchika"
-    class="bg-surface"
+    class="bg-surface ma-0"
     justify="center"
     align="center"
     no-gutters
   >
-    <v-col class="pt-8" cols="12" align="center">
-      <img
-        :class="$style.elchikaLogo"
-        src="@/assets/images/elchika-logo.svg"
-        alt="elchika-logo"
-      />
+    <v-spacer class="v-col-2 d-none d-md-block" />
+    <v-col>
+      <v-row class="ma-0">
+        <v-col class="v-col-12" align="center">
+          <img
+            :class="$style.elchikaLogo"
+            src="@/assets/images/elchika-logo.svg"
+            alt="elchika-logo"
+          />
+        </v-col>
+        <v-col class="v-col-12" align="center">
+          <div class="font-weight-bold text-h6 text-sm-h5">
+            ハードウェアの開発者コミュニティ
+          </div>
+        </v-col>
+        <v-col class="v-col-12" align="center">
+          <img
+            :class="$style.elchikaSite"
+            src="@/assets/images/elchika-site.png"
+            alt="elchika-site"
+          />
+        </v-col>
+        <v-col class="v-col-12">
+          <a
+            :class="$style.elchikaLink"
+            href="https://elchika.com/"
+            target="_blank"
+          >
+            https://elchika.com/
+          </a>
+          <p class="font-weight-bold text-subtitle-1">
+            バックエンド・フロントエンド全般を担当
+          </p>
+        </v-col>
+      </v-row>
     </v-col>
-    <v-col cols="12" align="center">
-      <div>ハードウェアの開発者コミュニティ</div>
-    </v-col>
-    <v-col cols="12" align="center">
-      <img
-        :class="$style.elchikaSite"
-        src="@/assets/images/elchika-site.png"
-        alt="elchika-site"
-      />
-    </v-col>
-    <v-col cols="12" align="center">
-      <a
-        :class="$style.elchikaLink"
-        href="https://elchika.com/"
-        target="_blank"
-      >
-        https://elchika.com/
-      </a>
-    </v-col>
+    <v-spacer class="v-col-2 d-none d-md-block" />
   </v-row>
 </template>
 
 <style module>
 .profile {
   .me {
-    width: 100%;
-    max-width: 300px;
+    max-width: 340px;
   }
 
   .section:nth-child(n + 2) {
     margin-top: 10px;
   }
+
+  .skill {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px 5px;
+
+    :global(.v-chip) {
+      color: #ffffff;
+      background-color: #ba03c9;
+    }
+  }
 }
 
 .elchika {
+  padding-top: 45px;
+
   .elchikaLogo {
     height: 30px;
   }
 
   .elchikaSite {
-    max-width: 70vw;
+    width: 100%;
   }
 
   .elchikaLink {
