@@ -1,8 +1,8 @@
-import { defineConfig } from "vite";
 import path from "path";
-import vue from "@vitejs/plugin-vue";
 import pluginRewriteAll from "vite-plugin-rewrite-all";
+import vue from "@vitejs/plugin-vue";
 import vuetify from "vite-plugin-vuetify";
+import { defineConfig } from "vite";
 
 const { BASE_URL } = process.env;
 
