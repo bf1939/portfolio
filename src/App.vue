@@ -26,7 +26,7 @@ if (location.hash) {
 }
 
 :root {
-  min-width: 340px;
+  min-width: 380px;
   font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
     "Hiragino Sans", Meiryo, sans-serif;
 }
