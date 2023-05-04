@@ -12,7 +12,7 @@ if (location.hash) {
   <v-app>
     <Header />
     <v-main>
-      <v-container fluid class="pa-0">
+      <v-container fluid class="pa-0 fill-height">
         <router-view />
       </v-container>
     </v-main>

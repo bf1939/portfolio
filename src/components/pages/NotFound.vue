@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <v-row class="fill-height" align="center" justify="center">
+  <v-row class="ma-0 fill-height" align="center" justify="center">
     <div :class="$style.text">This page could not be found.</div>
   </v-row>
 </template>
